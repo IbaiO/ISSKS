@@ -17,8 +17,8 @@ def install_steghide():
 install_steghide()
 
 # Step 2: Unzip the file
-zip_path = '/home/ibaio/Downloads/imagen.zip'
-extract_path = '/home/ibaio/Downloads/imagen_extracted'
+zip_path = '/home/lsi/Descargas/md5.zip'
+extract_path = '/home/lsi/Descargas/imagen_extracted'
 
 with zipfile.ZipFile(zip_path, 'r') as zip_ref:
     zip_ref.extractall(extract_path)
@@ -49,7 +49,7 @@ else:
     exit()
 
 # Step 5: Extract the hidden message using steghide with pexpect
-output_path = '/home/ibaio/Downloads/secret_message.txt'
+output_path = '/home/lsi/Descargas/secret_message.txt'
 command = f"steghide extract -sf {target_image} -xf {output_path}"
 
 child = pexpect.spawn(command)
