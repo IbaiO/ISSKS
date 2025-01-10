@@ -66,7 +66,6 @@ if not os.path.exists(output_path):
     print("steghide command failed.")
     exit()
 
-# Read and print the extracted message
 try:
     with open(output_path, 'r') as f:
         secret_message = f.read()
